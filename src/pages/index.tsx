@@ -1,8 +1,6 @@
 import { FormEvent, useState } from "react";
 
-
-import Router from 'next/router'
-
+import Router from "next/router";
 
 import { Container, Content } from "../styles/pages/home.style";
 
@@ -17,14 +15,11 @@ export default function Home() {
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    const { data } = await api.post("/names", {
+    await api.post("/account", {
       name,
     });
 
-    Router.push(`/${name}`)
-
-
-    
+    Router.push(`/${name}`);
   };
 
   return (

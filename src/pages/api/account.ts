@@ -14,9 +14,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     const { db } = await connect();
 
-    await db.collection("names").insertOne({ name });
+    await db.collection("accounts").insertOne({ name });
 
-    res.status(201).json({ message: "User created!" });
+    res.status(201).json({ message: "Account created!" });
   }
   return res.status(404).json({ message: "Route not found!" });
 };
