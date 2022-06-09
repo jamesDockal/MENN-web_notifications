@@ -8,6 +8,7 @@ export default createGlobalStyle`
   }
 
   * {
-    font: 500 16px Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
+
   }
 `;

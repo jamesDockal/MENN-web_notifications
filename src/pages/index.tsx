@@ -19,14 +19,14 @@ export default function Home() {
       name,
     });
 
-    Router.push(`/${name}`);
+    Router.push(`/account/${name}`);
   };
 
   return (
     <Container>
       <Content onSubmit={onSubmit}>
         <Input name="name" onChange={(e) => setName(e.target.value)} required />
-        <Button title="Create" type="submit" />
+        <Button title="Create" type="submit" kind="create" />
       </Content>
     </Container>
   );
