@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Content = styled.div`
+export const Content = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;

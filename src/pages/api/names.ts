@@ -18,5 +18,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     res.status(201).json({ message: "User created!" });
   }
-  return;
+  return res.status(404).json({ message: "Route not found!" });
 };
