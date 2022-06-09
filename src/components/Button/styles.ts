@@ -1,15 +1,39 @@
 import styled from "styled-components";
 
-export const ButtonComponent = styled.button`
+type Props = {
+  kind: "create" | "share" | "notification";
+};
+
+const bgs = {
+  create: {
+    background: "#01E053",
+    color: "#05192d",
+  },
+  share: {
+    background: "#5301E0",
+    color: "white",
+  },
+
+  notification: {
+    background: "#E05301",
+    color: "white",
+  },
+};
+
+export const ButtonComponent = styled.button<Props>`
   height: 3rem;
-  background: #01e053;
   width: 100%;
-  border: none;
-  border-radius: 4px;
-  color: #05192d;
   padding: 0 16px;
-  cursor: pointer;
+  border-radius: 4px;
+
+  background: ${({ kind }) => bgs[kind].background};
+  color: ${({ kind }) => bgs[kind].color};
+
   font-size: 20px;
+  font-weight: 500;
+
+  border: none;
+  cursor: pointer;
 
   &:hover {
     filter: opacity(0.9);
